@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <!-- Pantalla de resultados -->
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:gravity="end|center_vertical"
+        android:text="@string/resultado_inicial"
+        android:textColor="#FFFFFF"
+        android:textSize="42sp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        android:background="#1E1E1E"
+        android:fontFamily="monospace" />
+
+    <!-- Botones de la calculadora -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp">
+
+        <!-- Fila 1 -->
+        <Button android:id="@+id/btnClear" style="@style/CalcButtonGray" android:text="@string/btn_c" />
+        <Button android:id="@+id/btnParentesis" style="@style/CalcButtonGray" android:text="@string/btn_parentesis" />
+        <Button android:id="@+id/btnPorcentaje" style="@style/CalcButtonGray" android:text="@string/btn_porcentaje" />
+        <Button android:id="@+id/btnDividir" style="@style/CalcButtonOrange" android:text="@string/btn_dividir" />
+
+        <!-- Fila 2 -->
+        <Button android:id="@+id/btn7" style="@style/CalcButton" android:text="@string/btn_7" />
+        <Button android:id="@+id/btn8" style="@style/CalcButton" android:text="@string/btn_8" />
+        <Button android:id="@+id/btn9" style="@style/CalcButton" android:text="@string/btn_9" />
+        <Button android:id="@+id/btnMultiplicar" style="@style/CalcButtonOrange" android:text="@string/btn_multiplicar" />
+
+        <!-- Fila 3 -->
+        <Button android:id="@+id/btn4" style="@style/CalcButton" android:text="@string/btn_4" />
+        <Button android:id="@+id/btn5" style="@style/CalcButton" android:text="@string/btn_5" />
+        <Button android:id="@+id/btn6" style="@style/CalcButton" android:text="@string/btn_6" />
+        <Button android:id="@+id/btnRestar" style="@style/CalcButtonOrange" android:text="@string/btn_restar" />
+
+        <!-- Fila 4 -->
+        <Button android:id="@+id/btn1" style="@style/CalcButton" android:text="@string/btn_1" />
+        <Button android:id="@+id/btn2" style="@style/CalcButton" android:text="@string/btn_2" />
+        <Button android:id="@+id/btn3" style="@style/CalcButton" android:text="@string/btn_3" />
+        <Button android:id="@+id/btnSumar" style="@style/CalcButtonOrange" android:text="@string/btn_sumar" />
+
+        <!-- Fila 5 -->
+        <Button android:id="@+id/btn0" style="@style/CalcButton" android:text="@string/btn_0" />
+        <Button android:id="@+id/btnPunto" style="@style/CalcButton" android:text="@string/btn_punto" />
+        <Button android:id="@+id/btnIgual" style="@style/CalcButtonOrange" android:text="@string/btn_igual" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo base de botones -->
+    <style name="CalcButtonBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:background">@drawable/ripple_button</item>
+    </style>
+
+    <!-- Tonos personalizados -->
+    <style name="CalcButtonGray" parent="CalcButtonBase">
+        <item name="android:backgroundTint">#2A2A2A</item>
+    </style>
+
+    <style name="CalcButton" parent="CalcButtonBase">
+        <item name="android:backgroundTint">#1976D2</item>
+    </style>
+
+    <style name="CalcButtonOrange" parent="CalcButtonBase">
+        <item name="android:backgroundTint">#FF9800</item>
+    </style>
+
+</resources>
